@@ -1,5 +1,5 @@
 # Readme
-CCF sample starup in below steps:
+CCF sample start up in below steps:
 
 
 ##  1)  Start up TFS docker container:
