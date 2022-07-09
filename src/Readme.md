@@ -3,23 +3,23 @@
 CCF sample start up in below steps:
 
 ##  0)  Prerequisites
-        0.1) Generate prerequisites by running Notebook from below link
+### 0.1) Generate prerequisites by running Notebook from below link
         https://github.com/IBM/ai-on-z-fraud-detection/blob/main/ccf_220_keras_lstm_static-OS.ipynb
 
         Below files and directory will be generated:
          
-        **test_220_100k_os.csv**: has all transctions to simulate 6 historyical transctions plus 1 new came in transction. 
+        **test_220_100k_os.csv** : has all transctions to simulate 6 historyical transctions plus 1 new came in transction. 
         It be used by REST API Container , when CICS only set the tx_index, REST API Container can find the body of the new came in transction.
         It be used by Reids Container to store the 6 historyical transctions with the index of the new came in transction as key.
          
-        **test_220_100k.indices**: has index number of the 1 new came in transction of test_220_100k_os.csv. 
+        *test_220_100k.indices: has index number of the 1 new came in transction of test_220_100k_os.csv. 
         It be used by REST API Container. It be used by Reids Conainter
 
         **saved_models/P/ccf_220_keras_lstm_static/1**: has the saved model to be used for inference. It be used by TFS Container.
          
         **fitted_mapper.pkl**: Loading transctions from test_220_100k_os.csv into Redis, requried this file to mapping transctions into an TFS required JSON input.
 
-        0.2) Get required docker image or base image from IBM Registry
+### 0.2) Get required docker image or base image from IBM Registry
 
         **TFS image  :**  icr.io/ibmz/tensorflow-serving:2.7.0
         URL: https://ibm.github.io/ibm-z-oss-hub/containers/tensorflow-serving.html
