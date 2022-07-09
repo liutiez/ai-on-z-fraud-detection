@@ -49,9 +49,7 @@ Start TFS docker image with saved model under directory **saved_models/P/ccf_220
 
 ### 2.1) Start up Redis container
 
-        docker run  --rm -p 6579:6379 \
-           -v "$(pwd)/redis_data_six/data:/data"  \
-           --name redis626 -d icr.io/ibmz/redis:6.2.6 redis-server 
+        docker run  --rm -p 6579:6379 --name redis626 -d icr.io/ibmz/redis:6.2.6 redis-server 
 
 ### 2.2) Load historical transctions from test_220_100k_os.csv into Redis
 
