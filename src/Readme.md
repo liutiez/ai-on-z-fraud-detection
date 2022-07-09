@@ -4,7 +4,7 @@ CCF sample start up in below steps:
 
 ##  0)  Prerequisites
 ### 0.1) Generate prerequisites by running Notebook from below link
-        https://github.com/IBM/ai-on-z-fraud-detection/blob/main/ccf_220_keras_lstm_static-OS.ipynb
+        [Link]https://github.com/IBM/ai-on-z-fraud-detection/blob/main/ccf_220_keras_lstm_static-OS.ipynb
 
         Below files and directory will be generated:
          
