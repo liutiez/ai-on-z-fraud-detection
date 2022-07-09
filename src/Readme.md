@@ -1,6 +1,6 @@
 
 # Readme
-CCF sample start up with below steps:
+CCF low latency inference reference implementation can be started up with below steps:
 
 ##  0)  Prerequisites
 ### 0.1) Generate prerequisites by running Notebook from below link
