@@ -52,9 +52,9 @@ Start TFS docker image with saved model under directory saved_models/P/ccf_220_k
            -v "$(pwd)/redis_data_six/data:/data"  \
            --name redis626 -d icr.io/ibmz/redis:6.2.6 redis-server 
 
-### 2.2) Load transctions from test_220_100k_os.csv into Redis
+### 2.2) Load historical transctions from test_220_100k_os.csv into Redis
 
-         Make sure test_220_100k_os.csv , test_220_100k.indices and fitted_mapper.pkl under the same directory with redis_loader_os_loz_six.py
+Make sure test_220_100k_os.csv , test_220_100k.indices and fitted_mapper.pkl under the same directory with redis_loader_os_loz_six.py
 
          python3 ./redis_loader_os_loz_six.py Your redis_server_IP Your redis_server_Port
 
