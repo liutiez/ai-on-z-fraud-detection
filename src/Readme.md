@@ -22,15 +22,16 @@ It be used by Reids Conainter.
 
 ### 0.2) Get required docker image or base image from IBM Registry
 
-- ****TFS image**** : icr.io/ibmz/tensorflow-serving:2.7.0   
+- ****TFS image**** : icr.io/ibmz/tensorflow-serving:2.7.0      
 URL: https://ibm.github.io/ibm-z-oss-hub/containers/tensorflow-serving.html   
 docker pull icr.io/ibmz/tensorflow-serving@sha256:8da2e8e497fc839a76cad33b16a76e1ed537730b762a4c7f17fb2673e27fcf55     
 docker tag 27d0d64d5b2a icr.io/ibmz/tensorflow-serving:2.7.0    
 
-- ****Redis image**** : icr.io/ibmz/redis:6.2.6
+- ****Redis image**** : icr.io/ibmz/redis:6.2.6      
 URL: https://ibm.github.io/ibm-z-oss-hub/containers/redis.html    
 docker pull icr.io/ibmz/redis:6.2.6@sha256:ea17e0d3bff96aa84c458aee06404e1ea708eb5edc094bb47e38652ae7583f69   
-- ****REST API Server base image**** : icr.io/ibmz/ubuntu:18.04    
+
+- ****REST API Server base image**** : icr.io/ibmz/ubuntu:18.04       
 URL: https://ibm.github.io/ibm-z-oss-hub/containers/ubuntu.html    
 docker pull icr.io/ibmz/ubuntu:18.04@sha256:1185da02784dfbab9f3bee187311a2cb17efc4f8c027803a3c6b4a442a120e5c     
 
@@ -42,7 +43,7 @@ Start TFS docker image with saved model under directory **saved_models/P/ccf_220
         docker run -t --rm -p 7501:8501 \
            -v "location_of_saved_models/P/ccf_220_keras_lstm_static/1_put_here:/models/ccf_220_os_z_lstm" \
            -e MODEL_NAME=ccf_220_os_z_lstm \
-           --name ccf_220_os_z_tfs_v1 icr.io/ibmz/tensorflow-serving:2.4.0 &
+           --name ccf_220_os_z_tfs_v1 icr.io/ibmz/tensorflow-serving:2.7.0 &
 
 ##  2) Statr up Redis docker container:
 
