@@ -1,6 +1,6 @@
 
 # Readme
-CCF sample start up in below steps:
+CCF sample start up with below steps:
 
 ##  0)  Prerequisites
 ### 0.1) Generate prerequisites by running Notebook from below link
