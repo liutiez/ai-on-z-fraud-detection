@@ -47,11 +47,11 @@ Start TFS docker image with saved model under directory **saved_models/P/ccf_220
 
 ##  2) Statr up Redis docker container:
 
-###    2.1) Start up Redis container
+### 2.1) Start up Redis container
 
         docker run  --rm -p 6579:6379 --name redis626 -d icr.io/ibmz/redis:6.2.6 redis-server 
 
-###    2.2) Load historical transctions from test_220_100k_os.csv into Redis
+### 2.2) Load historical transctions from test_220_100k_os.csv into Redis
 
 Make sure **test_220_100k_os.csv** , **test_220_100k.indices** and **fitted_mapper.pkl** under the same directory with **redis_loader_os_loz_six.py**
 
@@ -60,10 +60,10 @@ Make sure **test_220_100k_os.csv** , **test_220_100k.indices** and **fitted_mapp
 
 ##  3) Start up REST API server docker container:
 
-###    3.1) Build REST API server docker image with Dockerfile
+### 3.1) Build REST API server docker image with Dockerfile
         
         docker build -t csl/api_svr_os_six:GA .    
 
-###    3.2) Start REST API Server container 
+###  3.2) Start REST API Server container 
 
          docker run  -p 8080:8080 -e REDISADD="Redis_IP:Redis_Port" -e TFSADD="TFS_IP:TFS_Port"  --name api_svr_six -d csl/api_svr_os_six:GA  
