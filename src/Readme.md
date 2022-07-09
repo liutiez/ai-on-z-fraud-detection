@@ -76,6 +76,7 @@ go version go1.10.4 linux/s390x or above
 
 ### 3.3) Start REST API Server container 
 
-         docker run  -p 8080:8080 \
-            -e REDISADD="Redis_IP:Redis_Port" -e TFSADD="TFS_IP:TFS_Port"  \
+         docker run  -p 8080:8080  \
+            -e REDISADD="Redis_IP:Redis_Port"  \
+            -e TFSADD="TFS_IP:TFS_Port"   \
             --name api_svr_six -d csl/api_svr_os_six:GA  
