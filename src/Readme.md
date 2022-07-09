@@ -60,10 +60,14 @@ Make sure **test_220_100k_os.csv** , **test_220_100k.indices** and **fitted_mapp
 
 ##  3) Start up REST API server docker container:
 
-### 3.1) Build REST API server docker image with Dockerfile
+### 3.1) Build Dockerfile required api_svr_os_six_ga and mapper.so from go source code
+
+        go  build api_svr_os_six_ga.go
+
+### 3.2) Build REST API server docker image with Dockerfile
         
         docker build -t csl/api_svr_os_six:GA .    
 
-###  3.2) Start REST API Server container 
+### 3.3) Start REST API Server container 
 
          docker run  -p 8080:8080 -e REDISADD="Redis_IP:Redis_Port" -e TFSADD="TFS_IP:TFS_Port"  --name api_svr_six -d csl/api_svr_os_six:GA  
