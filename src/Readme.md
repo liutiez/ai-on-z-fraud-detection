@@ -62,7 +62,10 @@ Make sure **test_220_100k_os.csv** , **test_220_100k.indices** and **fitted_mapp
 
 ### 3.1) Build Dockerfile required api_svr_os_six_ga and mapper.so from go source code
 
+go version go1.10.4 linux/s390x or above  
+
         go  build api_svr_os_six_ga.go
+        go  build -buildmode=plugin -o mapper.so ccf_os_mapper.go  mappermd.go
 
 ### 3.2) Build REST API server docker image with Dockerfile
         
