@@ -22,7 +22,7 @@ It be used by Reids Conainter.
 
 ### 0.2) Get required docker image or base image from IBM Registry
 
-- ****TFS image**** : icr.io/ibmz/tensorflow-serving:2.7.0
+- ****TFS image**** : icr.io/ibmz/tensorflow-serving:2.7.0   
 URL: https://ibm.github.io/ibm-z-oss-hub/containers/tensorflow-serving.html   
 docker pull icr.io/ibmz/tensorflow-serving@sha256:8da2e8e497fc839a76cad33b16a76e1ed537730b762a4c7f17fb2673e27fcf55     
 docker tag 27d0d64d5b2a icr.io/ibmz/tensorflow-serving:2.7.0    
@@ -37,7 +37,7 @@ docker pull icr.io/ibmz/ubuntu:18.04@sha256:1185da02784dfbab9f3bee187311a2cb17ef
 
 ##  1)  Start up TFS docker container:
 
-        Start TFS docker image with saved model under directory saved_models/P/ccf_220_keras_lstm_static/1 
+Start TFS docker image with saved model under directory saved_models/P/ccf_220_keras_lstm_static/1 
         
         docker run -t --rm -p 7501:8501 \
            -v "location_of_saved_models/P/ccf_220_keras_lstm_static/1_put_here:/models/ccf_220_os_z_lstm" \
