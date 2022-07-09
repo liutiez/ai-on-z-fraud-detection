@@ -37,7 +37,7 @@ docker pull icr.io/ibmz/ubuntu:18.04@sha256:1185da02784dfbab9f3bee187311a2cb17ef
 
 ##  1)  Start up TFS docker container:
 
-Start TFS docker image with saved model under directory saved_models/P/ccf_220_keras_lstm_static/1 
+Start TFS docker image with saved model under directory **saved_models/P/ccf_220_keras_lstm_static/1**
         
         docker run -t --rm -p 7501:8501 \
            -v "location_of_saved_models/P/ccf_220_keras_lstm_static/1_put_here:/models/ccf_220_os_z_lstm" \
@@ -54,7 +54,7 @@ Start TFS docker image with saved model under directory saved_models/P/ccf_220_k
 
 ### 2.2) Load historical transctions from test_220_100k_os.csv into Redis
 
-Make sure test_220_100k_os.csv , test_220_100k.indices and fitted_mapper.pkl under the same directory with redis_loader_os_loz_six.py
+Make sure **test_220_100k_os.csv** , **test_220_100k.indices** and **fitted_mapper.pkl** under the same directory with **redis_loader_os_loz_six.py**
 
          python3 ./redis_loader_os_loz_six.py Your redis_server_IP Your redis_server_Port
 
